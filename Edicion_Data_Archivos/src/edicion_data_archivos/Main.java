@@ -16,6 +16,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MainUI f = new MainUI(); 
+        f.setVisible (true); 
     }
     
 }

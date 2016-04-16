@@ -27,21 +27,87 @@ public class MainUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar_TopPrincipal = new javax.swing.JMenuBar();
+        JMB_TP_Opcion_Archivo = new javax.swing.JMenu();
+        JMB_TP_Archivo_Nuevo = new javax.swing.JMenu();
+        JMB_TP_Archivo_Nuevo_Volcado = new javax.swing.JMenuItem();
+        JMB_TP_Archivo_Nuevo_EdicionArchivo = new javax.swing.JMenuItem();
+        JMB_TP_Archivo_Nuevo_Traza = new javax.swing.JMenuItem();
+        JMB_TP_Opcion_Ayuda = new javax.swing.JMenu();
+        JMB_TP_Ayuda_AcercaDe = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        JMB_TP_Opcion_Archivo.setText("Archivo");
+
+        JMB_TP_Archivo_Nuevo.setText("Nuevo");
+
+        JMB_TP_Archivo_Nuevo_Volcado.setText("Volcado Unidad");
+        JMB_TP_Archivo_Nuevo_Volcado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMB_TP_Archivo_Nuevo_VolcadoActionPerformed(evt);
+            }
+        });
+        JMB_TP_Archivo_Nuevo.add(JMB_TP_Archivo_Nuevo_Volcado);
+
+        JMB_TP_Archivo_Nuevo_EdicionArchivo.setText("Edicion Archivo");
+        JMB_TP_Archivo_Nuevo_EdicionArchivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed(evt);
+            }
+        });
+        JMB_TP_Archivo_Nuevo.add(JMB_TP_Archivo_Nuevo_EdicionArchivo);
+
+        JMB_TP_Archivo_Nuevo_Traza.setText("Traza Archivo");
+        JMB_TP_Archivo_Nuevo_Traza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMB_TP_Archivo_Nuevo_TrazaActionPerformed(evt);
+            }
+        });
+        JMB_TP_Archivo_Nuevo.add(JMB_TP_Archivo_Nuevo_Traza);
+
+        JMB_TP_Opcion_Archivo.add(JMB_TP_Archivo_Nuevo);
+
+        jMenuBar_TopPrincipal.add(JMB_TP_Opcion_Archivo);
+
+        JMB_TP_Opcion_Ayuda.setText("Ayuda");
+
+        JMB_TP_Ayuda_AcercaDe.setText("Acerca De ...");
+        JMB_TP_Opcion_Ayuda.add(JMB_TP_Ayuda_AcercaDe);
+
+        jMenuBar_TopPrincipal.add(JMB_TP_Opcion_Ayuda);
+
+        setJMenuBar(jMenuBar_TopPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 858, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 481, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JMB_TP_Archivo_Nuevo_VolcadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_VolcadoActionPerformed
+        // TODO add your handling code here:
+        VolcadoDeUnidadUI jFrame= new VolcadoDeUnidadUI();//Levantar un JFrame con su funcionalidad
+        jFrame.setVisible(true);
+    }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_VolcadoActionPerformed
+
+    private void JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed
+        // TODO add your handling code here:
+        //Frame2 jFrame= new Frame2();//Levantar un JFrame con su funcionalidad
+    }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed
+
+    private void JMB_TP_Archivo_Nuevo_TrazaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_TrazaActionPerformed
+        // TODO add your handling code here:
+        //Frame2 jFrame= new Frame2();//Levantar un JFrame con su funcionalidad
+    }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_TrazaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +145,13 @@ public class MainUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu JMB_TP_Archivo_Nuevo;
+    private javax.swing.JMenuItem JMB_TP_Archivo_Nuevo_EdicionArchivo;
+    private javax.swing.JMenuItem JMB_TP_Archivo_Nuevo_Traza;
+    private javax.swing.JMenuItem JMB_TP_Archivo_Nuevo_Volcado;
+    private javax.swing.JMenuItem JMB_TP_Ayuda_AcercaDe;
+    private javax.swing.JMenu JMB_TP_Opcion_Archivo;
+    private javax.swing.JMenu JMB_TP_Opcion_Ayuda;
+    private javax.swing.JMenuBar jMenuBar_TopPrincipal;
     // End of variables declaration//GEN-END:variables
 }
