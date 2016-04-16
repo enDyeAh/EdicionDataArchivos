@@ -102,11 +102,13 @@ public class MainUI extends javax.swing.JFrame {
     private void JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed
         // TODO add your handling code here:
         //Frame2 jFrame= new Frame2();//Levantar un JFrame con su funcionalidad
+        //jFrame.setVisible(true);
     }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed
 
     private void JMB_TP_Archivo_Nuevo_TrazaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_TrazaActionPerformed
         // TODO add your handling code here:
         //Frame2 jFrame= new Frame2();//Levantar un JFrame con su funcionalidad
+        //jFrame.setVisible(true);
     }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_TrazaActionPerformed
 
     /**
