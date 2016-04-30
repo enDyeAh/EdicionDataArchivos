@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edicion_data_archivos;
+package ui;
 
 /**
  *
@@ -30,9 +30,9 @@ public class MainUI extends javax.swing.JFrame {
         jMenuBar_TopPrincipal = new javax.swing.JMenuBar();
         JMB_TP_Opcion_Archivo = new javax.swing.JMenu();
         JMB_TP_Archivo_Nuevo = new javax.swing.JMenu();
-        JMB_TP_Archivo_Nuevo_Volcado = new javax.swing.JMenuItem();
         JMB_TP_Archivo_Nuevo_EdicionArchivo = new javax.swing.JMenuItem();
         JMB_TP_Archivo_Nuevo_Traza = new javax.swing.JMenuItem();
+        JMB_TP_Archivo_Nuevo_EncryptDecrypt = new javax.swing.JMenuItem();
         JMB_TP_Opcion_Ayuda = new javax.swing.JMenu();
         JMB_TP_Ayuda_AcercaDe = new javax.swing.JMenuItem();
 
@@ -41,14 +41,6 @@ public class MainUI extends javax.swing.JFrame {
         JMB_TP_Opcion_Archivo.setText("Archivo");
 
         JMB_TP_Archivo_Nuevo.setText("Nuevo");
-
-        JMB_TP_Archivo_Nuevo_Volcado.setText("Volcado Unidad");
-        JMB_TP_Archivo_Nuevo_Volcado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JMB_TP_Archivo_Nuevo_VolcadoActionPerformed(evt);
-            }
-        });
-        JMB_TP_Archivo_Nuevo.add(JMB_TP_Archivo_Nuevo_Volcado);
 
         JMB_TP_Archivo_Nuevo_EdicionArchivo.setText("Edicion Archivo");
         JMB_TP_Archivo_Nuevo_EdicionArchivo.addActionListener(new java.awt.event.ActionListener() {
@@ -65,6 +57,14 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
         JMB_TP_Archivo_Nuevo.add(JMB_TP_Archivo_Nuevo_Traza);
+
+        JMB_TP_Archivo_Nuevo_EncryptDecrypt.setText("Encriptar // Desencriptar");
+        JMB_TP_Archivo_Nuevo_EncryptDecrypt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMB_TP_Archivo_Nuevo_EncryptDecryptActionPerformed(evt);
+            }
+        });
+        JMB_TP_Archivo_Nuevo.add(JMB_TP_Archivo_Nuevo_EncryptDecrypt);
 
         JMB_TP_Opcion_Archivo.add(JMB_TP_Archivo_Nuevo);
 
@@ -93,16 +93,10 @@ public class MainUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JMB_TP_Archivo_Nuevo_VolcadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_VolcadoActionPerformed
-        // TODO add your handling code here:
-        VolcadoDeUnidadUI jFrame= new VolcadoDeUnidadUI();//Levantar un JFrame con su funcionalidad
-        jFrame.setVisible(true);
-    }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_VolcadoActionPerformed
-
     private void JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed
         // TODO add your handling code here:
-        //Frame2 jFrame= new Frame2();//Levantar un JFrame con su funcionalidad
-        //jFrame.setVisible(true);
+        EdicionArchivo jFrame= new EdicionArchivo();//Levantar un JFrame con su funcionalidad
+        jFrame.setVisible(true);
     }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_EdicionArchivoActionPerformed
 
     private void JMB_TP_Archivo_Nuevo_TrazaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_TrazaActionPerformed
@@ -110,6 +104,13 @@ public class MainUI extends javax.swing.JFrame {
         //Frame2 jFrame= new Frame2();//Levantar un JFrame con su funcionalidad
         //jFrame.setVisible(true);
     }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_TrazaActionPerformed
+
+    private void JMB_TP_Archivo_Nuevo_EncryptDecryptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMB_TP_Archivo_Nuevo_EncryptDecryptActionPerformed
+        // TODO add your handling code here:
+        Encrypt_Drecrypt jFrame = new Encrypt_Drecrypt();
+        jFrame.setVisible(true);
+        
+    }//GEN-LAST:event_JMB_TP_Archivo_Nuevo_EncryptDecryptActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,8 +150,8 @@ public class MainUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu JMB_TP_Archivo_Nuevo;
     private javax.swing.JMenuItem JMB_TP_Archivo_Nuevo_EdicionArchivo;
+    private javax.swing.JMenuItem JMB_TP_Archivo_Nuevo_EncryptDecrypt;
     private javax.swing.JMenuItem JMB_TP_Archivo_Nuevo_Traza;
-    private javax.swing.JMenuItem JMB_TP_Archivo_Nuevo_Volcado;
     private javax.swing.JMenuItem JMB_TP_Ayuda_AcercaDe;
     private javax.swing.JMenu JMB_TP_Opcion_Archivo;
     private javax.swing.JMenu JMB_TP_Opcion_Ayuda;

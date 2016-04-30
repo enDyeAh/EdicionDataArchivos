@@ -5,6 +5,8 @@
  */
 package edicion_data_archivos;
 
+import ui.MainUI;
+
 /**
  *
  * @author J

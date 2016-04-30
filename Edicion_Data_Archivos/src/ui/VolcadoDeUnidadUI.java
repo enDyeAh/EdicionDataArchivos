@@ -3,7 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edicion_data_archivos;
+package ui;
+
+import edicion_data_archivos.VolcadoUnidad;
+import utils.jTree_ListDevicesVolcado;
+import javax.swing.tree.TreePath;
+import javax.swing.JTree;
 
 /**
  *
@@ -14,8 +19,13 @@ public class VolcadoDeUnidadUI extends javax.swing.JFrame {
     /**
      * Creates new form VolcadoDeUnidadUI
      */
+    private jTree_ListDevicesVolcado jTreeFiles = null;
+    
     public VolcadoDeUnidadUI() {
         initComponents();
+        jTreeFiles = new jTree_ListDevicesVolcado(); 
+        jTreeFiles.setJTree(jTree_ListDevicesVolcado);
+        jTreeFiles.init(); 
     }
 
     /**
@@ -28,11 +38,24 @@ public class VolcadoDeUnidadUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
+        jTree_ListDevicesVolcado = new javax.swing.JTree();
+        jBtn_Volcado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jScrollPane1.setViewportView(jTree1);
+        jTree_ListDevicesVolcado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTree_ListDevicesVolcadoMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTree_ListDevicesVolcado);
+
+        jBtn_Volcado.setText("Volcar unidad");
+        jBtn_Volcado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtn_VolcadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -40,15 +63,34 @@ public class VolcadoDeUnidadUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 684, Short.MAX_VALUE))
+                .addGap(235, 235, 235)
+                .addComponent(jBtn_Volcado, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 277, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBtn_Volcado, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(179, 179, 179))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtn_VolcadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtn_VolcadoActionPerformed
+        // TODO add your handling code here:
+        VolcadoUnidad objVolcado = new VolcadoUnidad();
+        objVolcado.Volcar("C:\\Users\\J\\Desktop\\fichero1.txt","92AE31A79FEEB2A3");
+        
+    }//GEN-LAST:event_jBtn_VolcadoActionPerformed
+
+    private void jTree_ListDevicesVolcadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTree_ListDevicesVolcadoMouseClicked
+        // TODO add your handling code here:
+        String pathSelectedTree = jTreeFiles.GetNodoSelected(evt.getX(), evt.getY());
+        System.out.println("pathSelectedTree: " + pathSelectedTree);
+    }//GEN-LAST:event_jTree_ListDevicesVolcadoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -86,7 +128,8 @@ public class VolcadoDeUnidadUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtn_Volcado;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTree jTree1;
+    private javax.swing.JTree jTree_ListDevicesVolcado;
     // End of variables declaration//GEN-END:variables
 }

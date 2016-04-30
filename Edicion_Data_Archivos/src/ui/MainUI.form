@@ -14,14 +14,6 @@
                 <Property name="text" type="java.lang.String" value="Nuevo"/>
               </Properties>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="JMB_TP_Archivo_Nuevo_Volcado">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Volcado Unidad"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JMB_TP_Archivo_Nuevo_VolcadoActionPerformed"/>
-                  </Events>
-                </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="JMB_TP_Archivo_Nuevo_EdicionArchivo">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Edicion Archivo"/>
@@ -36,6 +28,14 @@
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JMB_TP_Archivo_Nuevo_TrazaActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="JMB_TP_Archivo_Nuevo_EncryptDecrypt">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Encriptar // Desencriptar"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JMB_TP_Archivo_Nuevo_EncryptDecryptActionPerformed"/>
                   </Events>
                 </MenuItem>
               </SubComponents>
